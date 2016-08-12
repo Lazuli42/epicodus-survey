@@ -10,7 +10,7 @@ $("#question1").submit(function(event) {
 
   if (answer1 === "design") {
     $("#question1").hide();
-    $("#trackDesign").show(); }
+    $("#trackDesign").slideToggle(); }
     else {
       $("#question1").hide();
       $("#question2").show(); }
@@ -22,10 +22,8 @@ $("#question2").submit(function(event) {
 
   if (answer2 === "c") {
     cSharp++;
-    console.log("C#: " + cSharp);
     $("#question2").hide();
-    $("#question3").show();
-    return cSharp}
+    $("#question3").show(); }
   else if (answer2 === "p") {
     php++;
     $("#question2").hide();
@@ -33,7 +31,6 @@ $("#question2").submit(function(event) {
   else {
     Java++;
     ruby++;
-    console.log(Java);
     $("#question2").hide();
     $("#question3").show(); }
 });
@@ -46,8 +43,7 @@ $("#question3").submit(function(event) {
     cSharp++;
     php++;
     $("#question3").hide();
-    $("#question4").show();
-    return cSharp, php}
+    $("#question4").show(); }
   else if (answer3 === "jr") {
     Java++;
     ruby++;
@@ -55,7 +51,6 @@ $("#question3").submit(function(event) {
     $("#question4").show(); }
   else {
     Java++;
-    console.log(Java);
     $("#question3").hide();
     $("#question4").show(); }
 });
@@ -67,8 +62,7 @@ $("#question4").submit(function(event) {
   if (answer4 === "c") {
     cSharp++;
     $("#question4").hide();
-    $("#question5").show();
-    return cSharp}
+    $("#question5").show(); }
   else if (answer4 === "r") {
     ruby++;
     $("#question4").hide();
@@ -79,7 +73,6 @@ $("#question4").submit(function(event) {
     $("#question5").show(); }
   else {
     Java++;
-    console.log(Java);
     $("#question4").hide();
     $("#question5").show(); }
 });
@@ -87,22 +80,21 @@ $("#question4").submit(function(event) {
 $("#question5").submit(function(event) {
   event.preventDefault();
   var answer5 = $("input:radio[class=answer5]:checked").val();
+  console.log(cSharp + ", " + Java + ", " + php + ", " + ruby)
 
   if (answer5 === "yes") {
-    php = 10;
     $("#question5").hide();
-    $("#trackPHP").show();
-    return php; }
+    $("#trackPHP").slideToggle(); }
   else {
     $("#question5").hide();
     if ((cSharp > Java) && (cSharp > ruby) && (cSharp > php)) {
-      $("#trackCSharp").show(); }
+      $("#trackCSharp").slideToggle(); }
     else if ((ruby > Java) && (ruby > cSharp) && (ruby > php)) {
-      $("#trackRuby").show(); }
+      $("#trackRuby").slideToggle(); }
     else if ((php > Java) && (php > ruby) && (php > cSharp)) {
-      $("#trackPHP").show(); }
+      $("#trackPHP").slideToggle(); }
     else {
-      $("#trackJava").show(); }}
+      $("#trackJava").slideToggle(); }}
 });
 
 // $("#question5").submit(function(event) {

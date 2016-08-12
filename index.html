@@ -3,12 +3,13 @@
   <head>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-  <title>Epicodus Track Survey</title>
+    <title>Epicodus Track Survey</title>
   </head>
   <body>
     <div class="container">
-      <h1>What programming language should you learn at Epicodus?</h1>
+      <h1 id="header">What course should you take at Epicodus?</h1>
 
+      <!-- Question 1 -->
       <form id="question1">
         <h3>1. Are your more interested in front-end development (how things look) or back-end development (how things work)?</h3>
         <div class="radio">
@@ -30,9 +31,10 @@
           </label>
         </div>
 
-        <button type="submit" class="btn btn-default" id="submit4">Submit</button>
+        <button type="submit" class="btn btn-info" id="submit4">Submit</button>
       </form>
 
+      <!-- Question 2 -->
       <form id="question2">
         <h3>2. How much coding experience do you already have?</h3>
         <div class="radio">
@@ -54,9 +56,10 @@
           </label>
         </div>
 
-        <button type="submit" class="btn btn-default" id="submit3">Submit</button>
+        <button type="submit" class="btn btn-info" id="submit3">Submit</button>
       </form>
 
+      <!-- Question 3 -->
       <form id="question3">
         <h3>3. What kind of company would you like to work at?</h3>
         <div class="radio">
@@ -78,9 +81,10 @@
           </label>
         </div>
 
-        <button type="submit" class="btn btn-default" id="submit1">Submit</button>
+        <button type="submit" class="btn btn-info" id="submit1">Submit</button>
       </form>
 
+      <!-- Question 4 -->
       <form id="question4">
         <h3>4. What kind of software are you most interested in working on?</h3>
         <div class="radio">
@@ -114,9 +118,10 @@
           </label>
         </div>
 
-        <button type="submit" class="btn btn-default" id="submit2">Submit</button>
+        <button type="submit" class="btn btn-info" id="submit2">Submit</button>
       </form>
 
+      <!-- Question 5 -->
       <form id="question5">
         <h3>5. Will you be applying to the Philadelphia location?</h3>
         <div class="radio">
@@ -132,39 +137,46 @@
           </label>
         </div>
 
-        <button type="submit" class="btn btn-default" id="submit5">Submit</button>
+        <button type="submit" class="btn btn-info" id="submit5">Submit</button>
       </form>
 
-      <div class="result" id="trackCSharp">
-        <img src="img/csharp.png" class="img-responsive center-block">
-        <h1 class="text-center">You should take the C# track!</h1>
-        <p class="text-justify">C# and .NET are typically used by larger enterprises, government agencies, and companies serving enterprise and government clients. Portland companies using C# and .NET who have hired Epicodus graduates include Windsor and Incomm.</p>
-      </div>
+      <!-- Result screens -->
+      <div>
+        <div class="result" id="trackCSharp">
+          <img src="img/csharp.png" class="img-responsive center-block">
+          <h1 class="text-center">You should take the C# / .NET track!</h1>
+          <p class="text-justify">C# and .NET are typically used by larger enterprises, government agencies, and companies serving enterprise and government clients. Portland companies using C# and .NET who have hired Epicodus graduates include Windsor and Incomm.</p>
+          <button class="btn btn-success btn-lg center-block reload" type="submit">Take the quiz again</button>
+        </div>
 
-      <div class="result" id="trackJava">
-        <img src="img/java.png" class="img-responsive center-block">
-        <h1 class="text-center">You should take the Java track!</h1>
-        <p class="text-justify">Java is one of the most widely-used programming languages, and is used in everything from Android apps to large enterprise development. Portland companies using Java who have hired Epicodus graduates include Nike and Thetus.</p>
-      </div>
+        <div class="result" id="trackJava">
+          <img src="img/java.png" class="img-responsive center-block">
+          <h1 class="text-center">You should take the Java track!</h1>
+          <p class="text-justify">Java is one of the most widely-used programming languages, and is used in everything from Android apps to large enterprise development. Portland companies using Java who have hired Epicodus graduates include Nike and Thetus.</p>
+          <button class="btn btn-success btn-lg center-block reload" type="submit">Take the quiz again</button>
+        </div>
 
-      <div class="result" id="trackPHP">
-        <img src="img/php.png" class="img-responsive center-block">
-        <h1 class="text-center">You should take the PHP track!</h1>
-        <p class="text-justify">PHP and Drupal are typically used to build content-focused websites. Portland companies using PHP and Drupal who have hired Epicodus graduates include Intel, Metal Toad, and OpenSesame.</p>
-      </div>
+        <div class="result" id="trackPHP">
+          <img src="img/php.png" class="img-responsive center-block">
+          <h1 class="text-center">You should take the PHP track!</h1>
+          <p class="text-justify">PHP is most used in content-heavy websites with relatively little user interaction. The most popular content management systems - Wordpress, Drupal, and Joomla - are all written in PHP, and everything from local restaurants' websites up through large complex government deployments are built with these tools. If you're keen to work for an agency that builds websites for clients, or if you like the idea of building out sites for brands, businesses, and organizations, PHP is a great direction to go.</p>
+          <button class="btn btn-success btn-lg center-block reload" type="submit">Take the quiz again</button>
+        </div>
 
-      <div class="result" id="trackRuby">
-        <img src="img/ruby.png" class="img-responsive center-block">
-        <h1 class="text-center">You should take the Ruby track!</h1>
-        <p class="text-justify">Ruby and Rails are typically used by younger companies and startups, especially for building interactive web applications. Portland companies using Ruby and Rails who have hired Epicodus graduates include New Relic, LivingSocial, and SpendWell.</p>
-      </div>
+        <div class="result" id="trackRuby">
+          <img src="img/ruby.png" class="img-responsive center-block">
+          <h1 class="text-center">You should take the Ruby track!</h1>
+          <p class="text-justify">Ruby and Rails are typically used by younger companies and startups, especially for building interactive web applications. Portland companies using Ruby and Rails who have hired Epicodus graduates include New Relic, LivingSocial, and SpendWell.</p>
+          <button class="btn btn-success btn-lg center-block reload" type="submit">Take the quiz again</button>
+        </div>
 
-      <div class="result" id="trackDesign">
-        <img src="img/design.png" class="img-responsive center-block">
-        <h1 class="text-center">You should take the Design track!</h1>
-        <p class="text-justify">In a world dominated by big brands and big ideas, the need for skilled designers is greater than ever. Whether you are an aspiring freelancer, a design-savvy front-end developer, or a budding UI/UX designer, this course is a launching point for anyone interested in designing beautiful, memorable web experiences.</p>
+        <div class="result" id="trackDesign">
+          <img src="img/design.png" class="img-responsive center-block">
+          <h1 class="text-center">You should take the CSS / Design track!</h1>
+          <p class="text-justify">In a world dominated by big brands and big ideas, the need for skilled designers is greater than ever. Whether you are an aspiring freelancer, a design-savvy front-end developer, or a budding UI/UX designer, this course is a launching point for anyone interested in designing beautiful, memorable web experiences.</p>
+          <button class="btn btn-success btn-lg center-block reload" type="submit">Take the quiz again</button>
+        </div>
       </div>
-
     </div>
 
 <!-- Javascript files -->

@@ -1,3 +1,8 @@
+body {
+  font-family: sans-serif;
+  color: #00b3b4;
+}
+
 .container {
   max-width: 8.5in;
 }
@@ -12,4 +17,8 @@ form {
 
 #question1 {
   display: block;
+}
+
+img {
+  margin: 15px;
 }

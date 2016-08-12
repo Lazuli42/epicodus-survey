@@ -10,10 +10,11 @@ $("#question1").submit(function(event) {
 
   if (answer1 === "design") {
     $("#question1").hide();
+    $("#header").hide();
     $("#trackDesign").slideToggle(); }
-    else {
-      $("#question1").hide();
-      $("#question2").show(); }
+  else {
+    $("#question1").hide();
+    $("#question2").show(); }
 });
 
 $("#question2").submit(function(event) {
@@ -21,16 +22,16 @@ $("#question2").submit(function(event) {
   var answer2 = $("input:radio[class=answer2]:checked").val();
 
   if (answer2 === "c") {
-    cSharp++;
+    cSharp += 1;
     $("#question2").hide();
     $("#question3").show(); }
   else if (answer2 === "p") {
-    php++;
+    php += 1;
     $("#question2").hide();
     $("#question3").show(); }
   else {
-    Java++;
-    ruby++;
+    Java += 1;
+    ruby += 1;
     $("#question2").hide();
     $("#question3").show(); }
 });
@@ -40,17 +41,17 @@ $("#question3").submit(function(event) {
   var answer3 = $("input:radio[class=answer3]:checked").val();
 
   if (answer3 === "cp") {
-    cSharp++;
-    php++;
+    cSharp += 2;
+    php += 2;
     $("#question3").hide();
     $("#question4").show(); }
   else if (answer3 === "jr") {
-    Java++;
-    ruby++;
+    Java += 2;
+    ruby += 2;
     $("#question3").hide();
     $("#question4").show(); }
   else {
-    Java++;
+    Java += 1;
     $("#question3").hide();
     $("#question4").show(); }
 });
@@ -60,19 +61,23 @@ $("#question4").submit(function(event) {
   var answer4 = $("input:radio[class=answer4]:checked").val();
 
   if (answer4 === "c") {
-    cSharp++;
+    cSharp  += 3;
     $("#question4").hide();
     $("#question5").show(); }
   else if (answer4 === "r") {
-    ruby++;
+    ruby  += 3;
     $("#question4").hide();
     $("#question5").show(); }
   else if (answer4 === "p") {
-    php++;
+    php  += 3;
+    $("#question4").hide();
+    $("#question5").show(); }
+  else if (answer4 === "j") {
+    Java  += 3;
     $("#question4").hide();
     $("#question5").show(); }
   else {
-    Java++;
+    Java += 1;
     $("#question4").hide();
     $("#question5").show(); }
 });
@@ -84,9 +89,11 @@ $("#question5").submit(function(event) {
 
   if (answer5 === "yes") {
     $("#question5").hide();
+    $("#header").hide();
     $("#trackPHP").slideToggle(); }
   else {
     $("#question5").hide();
+    $("#header").hide();
     if ((cSharp > Java) && (cSharp > ruby) && (cSharp > php)) {
       $("#trackCSharp").slideToggle(); }
     else if ((ruby > Java) && (ruby > cSharp) && (ruby > php)) {
@@ -97,19 +104,6 @@ $("#question5").submit(function(event) {
       $("#trackJava").slideToggle(); }}
 });
 
-// $("#question5").submit(function(event) {
-//   event.preventDefault();
-//
-//   if ((cSharp > Java) && (cSharp > ruby) && (cSharp > php)) {
-//     $("#question5").hide();
-//     $("#trackCSharp").show(); }
-//   else if ((ruby > Java) && (ruby > cSharp) && (ruby > php)) {
-//     $("#question5").hide();
-//     $("#trackruby").show(); }
-//   else if ((php > Java) && (php > ruby) && (php > cSharp)) {
-//     $("#question5").hide();
-//     $("#trackphp").show(); }
-//   else {
-//     $("#question5").hide();
-//     $("#trackJava").show(); }
-// });
+$(".reload").click(function(){
+  location.reload();
+})

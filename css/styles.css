@@ -1,0 +1,15 @@
+.container {
+  max-width: 8.5in;
+}
+
+.result{
+  display: none;
+}
+
+form {
+  display: none;
+}
+
+#question1 {
+  display: block;
+}

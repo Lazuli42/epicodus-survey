@@ -6,8 +6,154 @@
   <title>Epicodus Track Survey</title>
   </head>
   <body>
-    <h1>What language should you learn at Epicodus?</h1>
-    
+    <div class="container">
+      <h1>What programming language should you learn at Epicodus?</h1>
+
+      <form id="question1">
+        <h3>1. Are your more interested in front-end development (how things look) or back-end development (how things work)?</h3>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" class="answer1" value="design" checked>
+            Front-end.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" class="answer1" value="develop">
+            Back-end.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" class="answer1" value="develop">
+            Not sure.
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-default" id="submit4">Submit</button>
+      </form>
+
+      <form id="question2">
+        <h3>2. How much coding experience do you already have?</h3>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" class="answer2" value="c" checked>
+            A lot of experience, have worked in the field for at least several years.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" class="answer2" value="p">
+            Some experience, have done coding at home but little to no proffesional work.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" class="answer2" value="jr">
+            Very little or no experience.
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-default" id="submit3">Submit</button>
+      </form>
+
+      <form id="question3">
+        <h3>3. What kind of company would you like to work at?</h3>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" class="answer3" value="cp" checked>
+            Larger enterprises or government agencies.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" class="answer3" value="jr">
+            A small startup company or young business.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" class="answer3" value="j">
+            Not sure.
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-default" id="submit1">Submit</button>
+      </form>
+
+      <form id="question4">
+        <h3>4. What kind of software are you most interested in working on?</h3>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" class="answer4" value="c" checked>
+            Internal business software.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" class="answer4" value="j">
+            Mobile appications for smart phones.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" class="answer4" value="p">
+            Content-heavy websites with relatively little user interaction.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" class="answer4" value="r">
+            Interactive web applications with dynamic content.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" class="answer4" value="j">
+            Not sure.
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-default" id="submit2">Submit</button>
+      </form>
+
+      <form id="question5">
+        <h3>5. Will you be applying to the Philadelphia location?</h3>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" class="answer5" value="yes" checked>
+            Yes.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" class="answer5" value="no">
+            No.
+          </label>
+        </div>
+
+
+        <button type="submit" class="btn btn-default" id="submit5">Submit</button>
+      </form>
+
+      <div class="result" id="trackCSharp">
+        <h1>You should take the C# track!</h1>
+      </div>
+      <div class="result" id="trackJava">
+        <h1>You should take the Java track!</h1>
+      </div>
+      <div class="result" id="trackPHP">
+        <h1>You should take the PHP track!</h1>
+      </div>
+      <div class="result" id="trackRuby">
+        <h1>You should take the Ruby track!</h1>
+      </div>
+      <div class="result" id="trackDesign">
+        <img src="img/design.png" class="img-responsive center-block">
+        <h1 class="text-center">You should take the Design track!</h1>
+      </div>
+
+    </div>
 
 <!-- Javascript files -->
     <script src="js/jquery-3.1.0.js"></script>

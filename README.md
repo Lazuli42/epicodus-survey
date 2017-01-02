@@ -1,24 +1,24 @@
-# _{Epicodus Track Survey}_
+# _Epicodus Track Survey_
 
-#### _{8/12/2016}_
+#### _8/12/2016_
 
-#### By _**{Zachary Baum}**_
+#### By _**Zachary Baum**_
 
 ## Description
 
-_{A short survey to help students at Epicodus decide which courses to take.}_
+_A short survey to help students at Epicodus decide which courses to take._
 
 ## Link
 
-_{https://lazuli42.github.io/epicodus-survey/}_
+_https://lazuli42.github.io/epicodus-survey/_
 
 ## Support and contact details
 
-_{zacharybaum42@gmail.com}_
+_zacharybaum42@gmail.com_
 
 ## Technologies Used
 
-_{Written with Javascript.}_
+_Written with Javascript._
 
 
-Copyright (c) 2016 **_{Zachary Baum}_**
+Copyright (c) 2016 **_Zachary Baum_**
